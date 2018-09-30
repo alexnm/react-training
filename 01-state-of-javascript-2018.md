@@ -6,6 +6,7 @@ JavaScript is no longer the scripting language used to add some minimal interrac
 **References**
 * [ECMAScript2015/ES6 features](http://es6-features.org/#Constants)
 * [Egghead course on ES2015](https://egghead.io/courses/learn-es6-ecmascript-2015)
+* [ES Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 * [TC-39's github org](https://github.com/tc39/ecma262) - Proposals are actively developed here
 
 ## Async JavaScript
