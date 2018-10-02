@@ -1,15 +1,15 @@
 # Modern Web Development
 Before we dive deep into the React ecosystem, let's take a closer look at the current state of web development.
 
-## Breaking the monolight
-The traditional monolight is being replaced with a more specialized architecture. There are multiple approaches here and it's not the aim of this training to cover them, but the frontend ecosystem is being heavily impacted by this architectural shift
+## Breaking the monolith
+The traditional monoligh is being replaced with a more specialized architecture. There are multiple approaches here and it's not the aim of this training to cover them, but the frontend ecosystem is being heavily impacted by this architectural shift
 * The frontend code is no longer embedded into the backend web application framework (ex: RubyOnRails, ASP.NET MVC, Django)
 * The backend has a clear interface through which it provides only data access (ex: REST API, GraphQL)
 * The frontend code is not just a collection of modules that provide interactivity, but now has complex responsibility like: routing, templating, data management, etc.
 * The frontend ecosystem is rich with build tools and libraries that compile the code to standard html, css and javascript (ex: Webpack, Babel, Gulp, TypeScript/Flowtype, CSS-in-JS)
 
 **References**
-* [Breaking the monolight](https://martinfowler.com/articles/break-monolith-into-microservices.html)
+* [Breaking the monolith](https://martinfowler.com/articles/break-monolith-into-microservices.html)
 * [Again, this is a great article!](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
 
 ## Component Based UI
