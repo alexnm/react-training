@@ -11,7 +11,7 @@ Reference materials for the introduction to React/Redux classroom training. Each
 * Testing React Apps (optional)
 * State Management & Data Flows
 * Redux
-* Frontend Architecture
+* React-Redux Integration
 * Backend Integration
 
 **General References**
