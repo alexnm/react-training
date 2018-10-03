@@ -135,8 +135,61 @@ Some of the hooks explained:
 
 Check out [an example](https://codesandbox.io/s/y26zrw0z9) with a couple of hooks added to a component.
 
-### Constructor (or not)
-You may have noticed some strange syntax when defining the React components as `classes`. 
+### BONUS: Constructor (or not)
+You may have noticed some strange syntax when defining the React components as `classes`. `key = value` inside the definition of a class is what we call a **class property**. This is an almost standardized syntax for JS classes that just needs a [babel transform](https://babeljs.io/docs/en/babel-plugin-transform-class-properties) to work in your `webpack/babel` setup.
+
+In the past, in order for event handlers to properly have acces to the component instance (`this.props`, `this.state`) you would have had to manually **bind** them inside the constructor, like this:
+```javascript
+class Message extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            showMessage: true,
+        };
+
+        this.toggle = this.toggle.bind(this);
+    }
+
+    toggle() {
+        this.setState(state => ({
+            showMessage: !state.showMessage,
+        }));
+    }
+
+    render() {
+        return (
+            <div>
+                {this.state.showMessage && "Message is visible"}
+                <button onClick={this.toggle}>Click me!</button>
+            </div>
+        );
+    }
+}
+```
+
+With class properties, you end up with this, eliminating the need for a `constructor` function:
+```javascript
+class Message extends React.Component {
+    state = {
+        showMessage: true,
+    };
+
+    toggle = () => {
+        this.setState(state => ({
+            showMessage: !state.showMessage,
+        }));
+    };
+
+    render() {
+        return (
+            <div>
+                {this.state.showMessage && "Message is visible"}
+                <button onClick={this.toggle}>Click me!</button>
+            </div>
+        );
+    }
+}
+```
 
 **References**
 * [React Official Tutorial](https://reactjs.org/tutorial/tutorial.html)
@@ -144,3 +197,4 @@ You may have noticed some strange syntax when defining the React components as `
 * [Egghead Course](https://blog.kentcdodds.com/learn-react-fundamentals-and-advanced-patterns-eac90341c9db)
 * [I wish I new these before diving into React](https://engineering.opsgenie.com/i-wish-i-knew-these-before-diving-into-react-301e0ee2e488)
 * [React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+* [Class Properties in React](https://codeburst.io/use-class-properties-to-clean-up-your-classes-and-react-components-93185879f688)
