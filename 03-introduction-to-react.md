@@ -127,11 +127,11 @@ Source: https://twitter.com/dan_abramov/status/981712092611989509
 For each stage in the life of a component we have specific functions that we can optionally implement in our components. We will go through a few just to get the feeling, but don't worry, you don't need to learn complex logic to understand how the hooks are called. Usually, you will find that each specific use-case falls into a specific pattern. When you need to use the lifecycle hooks in an "unnatural" way, you immediately can feel that something is not right.
 
 Some of the hooks explained:
-* constructor - called just once when the component is instantiated.
-* componentDidMount - called just once, after the component is added for the first time to the DOM, used for adding event handlers or making async data calls.
-* componentWillUnmount - called just once, when the component is due to be removed from the DOM, used for cleanup.
-* shouldComponentUpdate - method used for component-level performance optimization
-* componentWillReceiveProps (deprecated) - replaced by `getDerivedStateFromProps`, called before the mount and also after each component re-render.
+* `constructor` - called just once when the component is instantiated.
+* `componentDidMount` - called just once, after the component is added for the first time to the DOM, used for adding event handlers or making async data calls.
+* `componentWillUnmount` - called just once, when the component is due to be removed from the DOM, used for cleanup.
+* `shouldComponentUpdate` - method used for component-level performance optimization
+* `componentWillReceiveProps` (deprecated) - replaced by `getDerivedStateFromProps`, called before the mount and also after each component re-render.
 
 Check out [an example](https://codesandbox.io/s/y26zrw0z9) with a couple of hooks added to a component.
 
