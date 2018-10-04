@@ -57,13 +57,13 @@ Subsequently, when the `<Restaurant>` component will mount, it will receive the 
 * `this.props.history` -> reference to the browser history object
 * `this.props.match` -> an object with the result of the route match, that among others has the params from the dynamic url
 
-Hence, if you want to access the dynamic `:foodType` param, you would use: `this.props.match.params.foodType`. You can check out this full **example** on [codesandbox]().
+Hence, if you want to access the dynamic `:foodType` param, you would use: `this.props.match.params.foodType`. You can check out this full **example** on [codesandbox](https://codesandbox.io/s/84yk989mw2).
 
 ## Redirects
 
 Another useful scenario is when you want a certain url to be redirected to another one, or you want to redirect somewhere based on a user action (ex: login). In those cases, you can use the `<Redirect>` component. When a `<Redirect>` is rendered, it immediately uses the history API to change the url to the specified location. When `<Redirect>` is specified in a list of routes, you need to send the `from` prop, for react-router to know when the redirect should happen. 
 
-Check [this example]() of using a Redirect component.
+Check [this example](https://codesandbox.io/s/l53kl1mp2z) of using a Redirect component.
 
 **References**
 * [react-router official docs](https://reacttraining.com/react-router/)
