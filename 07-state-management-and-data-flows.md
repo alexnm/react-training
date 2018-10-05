@@ -45,6 +45,6 @@ The **UI** will usually **listen** for **events** coming from the state (ex: sta
 The way state is managed in uni-directional architectures has some similarities with the [event sourcing](https://martinfowler.com/eaaDev/EventSourcing.html) architecture model.
 
 **References**
-[What is a pure function](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976)
-[Immutable data structures in JS](https://www.youtube.com/watch?v=noBDly9LuSs)
-[Flux Architecture](https://facebook.github.io/flux/)
+* [What is a pure function](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976)
+* [Immutable data structures in JS](https://www.youtube.com/watch?v=noBDly9LuSs)
+* [Flux Architecture](https://facebook.github.io/flux/)
