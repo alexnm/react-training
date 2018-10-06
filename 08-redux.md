@@ -6,7 +6,7 @@ One word of advice, before we begin: Redux (or any state management library) doe
 ## Single state object
 Redux has a single state object, called **store**. The object is created/initialized with the `createStore` function provided by Redux.
 
-The only condition for the store object is to be a serializable object, so it can contain anything from arrays, sub-objects, booleans, numbers and strings. Shapping the state object is entirely in the hands of the developer.
+The only condition for the store object is to be a serializable object, so it can contain anything from arrays, sub-objects, booleans, numbers and strings. Shaping the state object is entirely in the hands of the developer.
 
 Let's consider a simple store object keeping info about the session
 ```javascript
@@ -35,7 +35,7 @@ Example action:
 
 An action is triggered with the `store.dispatch` function (see below).
 
-Reducers are **pure functions** that take the **current state**, the **action** being dispatched and return the **new state** based on that action. In the simplest form, the reducer is a switch statement that acts acording to the action type. Keep in mind that the state should not be directly mutated inside the reducers, but a new state should be created with each pass.
+Reducers are **pure functions** that take the **current state** and the **action** being dispatched, and return the **new state** based on that action. In the simplest form, the reducer is a switch statement that acts according to the action type. Keep in mind that the state should not be directly mutated inside the reducers, but a new state should be created with each pass.
 
 The function looks like this: `const reducer = (state, action) => state`.
 
