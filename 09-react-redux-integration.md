@@ -1,9 +1,15 @@
 # React/Redux
 
-## Connecting to Redux from JavaScript
+## Provider
 
-## react-redux (connect)
+## Connect
 
-## Container vs Components
+### mapStateToProps
 
-## App structure (folders)
+### mapDispatchToProps
+
+## Redux Selectors
+
+## Container vs Presentational Components
+
+## Scaling Redux
