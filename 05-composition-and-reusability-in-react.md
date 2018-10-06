@@ -84,12 +84,24 @@ const App = (
 **[Full Example](https://codesandbox.io/s/8xj528p53j)**
 
 ## Reusability and Composition
+Below are a couple of well known patterns that are widely used in the React community. However, getting in depth into them are a bit beyond the scope of this introductory course. These are, however, good references for continuing the learning path with React. They also require a bit of hands-on experience with React to be properly understood and for them to make sense.
 
 ### Higher Order Components
+Starting from the concept of [higher-order functions](https://eloquentjavascript.net/05_higher_order.html), the community developed the concept of higher order component (or HOC) that is nothing more than a function which accept a component as a parameter and returns a modified version of that component. They are also called *decorators* or *enhancers* because the similarities with the decorator pattern.
+
+A few examples can be found in [this sandbox](https://codesandbox.io/s/vv198n1y00).
+
+HOCs are providing **static composition** and are useful when implementing [cross-cutting concerns](https://en.wikipedia.org/wiki/Cross-cutting_concern) (logging, authorization, 3rd party integration, etc.) HOCs are used by a lot of libraries in the React ecosystem, most notably react-redux, recompose, redux-forms, etc.
 
 ### Render Props
+Another pattern for reusing bits of functionality, the idea behind the render prop pattern is to send a **function prop** to a child component and to expect that component to call the function and place the resulting JSX (the render prop should return some JSX) inside its own **render** function.
+
+A few examples can be found [here](https://codesandbox.io/s/nk9jvnp3wp).
+
+Render props are providing **dynamic composition** allowing you to share small pieces of logic between components. The pattern is also used in libraries in the React ecosystem: react-motion, react-router, formik, etc.
 
 ### React Context
+React has a 3rd way of handling data and an additional way of passing data between components (other than props). It is called the **context** and has not been a widely used functionality because it was mostly considered experimental and aimed at helping library creators. However, since **React 16.3**, a nice sytax was standardized and the **Context API** can be used today following [the documentation](https://reactjs.org/docs/context.html).
 
 **References**
 * [React Patterns](https://reactpatterns.com/)
