@@ -1,7 +1,7 @@
 # Redux
 By far the most popular state management library in the React ecosystem, Redux offers a simple and efficient pattern through which you do state management. Learning Redux is pretty easy, as the library itself can be written in several lines of code. But there's a huge ecosystem around Redux which tends to get rather complex and has a very steep learning curve. Today the community is debating a lot on using Redux and the Redux ecosystem, but all in all it is a widely used solution and it is definitely a good learning step before moving to something else.
 
-One word of advice, before we begin: Redux or any state management library does not need to be there from the beginning. Maybe an early stage project doesn't need a separate state management library. Make sure you take that into account when decided on the tech stack for a new project.
+One word of advice, before we begin: Redux (or any state management library) does not need to be there from the beginning. Maybe an early stage project doesn't need a separate state management library. Make sure you take that into account when deciding on the tech stack for a new project.
 
 ## Single state object
 Redux has a single state object, called **store**. The object is created/initialized with the `createStore` function provided by Redux.
