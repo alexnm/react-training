@@ -41,6 +41,16 @@ The function looks like this: `const reducer = (state, action) => state`.
 
 You can think of the Redux store as a state machine, with an infinite number of possible states, but with a very easy way to visualize both the current state **N** and all the previous **N-1** states, because of the predictibility of the actions/reducers system.
 
+When you need to pass dynamic values as payloads on actions, the practice is to wrap each each into a function, called **action creator**:
+```javascript
+const login = (username) => ({
+  type: "LOGIN",
+  payload: {
+    username
+  }
+}
+```
+
 ## Redux API
 As mentioned before, Redux is a very simple library
 
