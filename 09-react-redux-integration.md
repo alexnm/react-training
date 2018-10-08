@@ -75,6 +75,13 @@ There are a bunch of patterns for mapDispatchToProps, trying to abstract and avo
 
 Each dispatch to Redux will trigger the reducers to calculate the new state of the application, so each new state means that the two functions are called, so new props *might* be passed to the components, triggering a re-render. To get more in depth into the re-render mechanisms, check the documentation and look at the *pure* configuration option.
 
+## Small Project
+With everything we learned so far, try implementing a shopping cart functionality on top of this [existing sandbox](https://codesandbox.io/s/n697w23oj). You can add the following:
+* A separate page for displaying an individual product (route, react component, link to page)
+* Button for adding a product to cart
+* State management for cart (add to cart, remove from cart, increase quantity)
+* Page for the shopping cart (with buttons/links for the above functionality)
+
 ## Redux Selectors
 Sometimes the raw state needs some sort of transformation in order to represent relevant data for the UI. One such example might be the cart total, in a shopping cart store. The total may not be kept as an exact value inside the store, but can be computed out of each new state based on the line items. A **selector** is a function that does that computation for you. When you define selectors on top of the Redux store, you eliminate the need to duplicate this logic inside each component where the computed data is needed. Selectors are simple functions that can be used inside `mapStateToProps`:
 ```javascript
