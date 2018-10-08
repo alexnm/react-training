@@ -46,7 +46,24 @@ Here's the [codesandbox example](https://codesandbox.io/s/ppkmw39yz7)
 ## redux-thunk
 Fetching the data inside the component is fine, but in this case we are also managing the dispatches from the component and this tends to become repetitive. It would be nice if we could just dispatch a single action and let redux do its magic.
 
-**redux-thunk** can help with that! This is a very simple middleware, but a very powerful one. It allows you to dispatch a function instead of an object.
+**redux-thunk** can help with that! This is a very simple middleware, but a very powerful one. It allows you to dispatch a function instead of an object. That function will always receive the `dispatch` reference as the first parameter. So when writing a `thunk`, we actually write an **action creator** which dispatches one or more simple actions.
+
+Here's a quick example:
+```javascript
+const fetchBook = url => dispatch => {
+    dispatch(fetchBookStarted());
+    fetch(url)
+        .then(res => res.json())
+        .then(
+            res => dispatch(fetchBookCompleted(res)),
+            err => dispatch(fetchBookFailed(err))
+        );
+};
+```
+
+and the full [sandbox example](https://codesandbox.io/s/739x3z0w20).
+
+Other alternatives for handling multiple dispatches for a single action are: redux-saga, redux-observables.
 
 **References**
 * [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
