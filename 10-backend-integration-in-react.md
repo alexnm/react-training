@@ -22,13 +22,35 @@ The simplest way of working with backend services may be simply to call the endp
 ## Async Redux Actions
 If we want toto integrate async data into the Redux store, one option is to imagine the entire flow with **actions**. let's consider that we want to fetch a book from an endpoint. The action could be called `FETCH_BOOK`. But when is this action dispatched? When we integrate an async call we have three possible moments: when the call is sent, when the response is successful, or when we have a failure. The common practice is to define the three moments as Redux actions: `FETCH_BOOK`, `FETCH_BOOK_COMPLETED`, `FETCH_BOOK_FAILED`. They would look like this:
 ```javascript
+export const fetchBook = () => ({
+    type: "FETCH_BOOK",
+});
 
+export const fetchBookCompleted = book => ({
+    type: "FETCH_BOOK_COMPLETED",
+    payload: {
+        book: book,
+    },
+});
+
+export const fetchBookFailed = err => ({
+    type: "FETCH_BOOK_FAILED",
+    payload: {
+        err: err,
+    },
+});
 ```
 
+Here's the [codesandbox example](https://codesandbox.io/s/ppkmw39yz7)
+
 ## redux-thunk
+Fetching the data inside the component is fine, but in this case we are also managing the dispatches from the component and this tends to become repetitive. It would be nice if we could just dispatch a single action and let redux do its magic.
+
+**redux-thunk** can help with that! This is a very simple middleware, but a very powerful one. It allows you to dispatch a function instead of an object.
 
 **References**
 * [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+* [redux-thunk](https://github.com/reduxjs/redux-thunk)
 
 ## Future References
 * Server render
