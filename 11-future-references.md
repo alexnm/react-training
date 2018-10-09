@@ -1,4 +1,4 @@
-#Future References
+# Future References
 Here are a bunch of references and ideas to continue your training in the React/Redux world.
 * Integrate a REST API in your e-commerce application
 * Do local setup with [create-react-app](https://github.com/facebook/create-react-app) or try an [alternative starter](https://github.com/FortechRomania/react-starter-kit).
