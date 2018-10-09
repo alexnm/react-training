@@ -68,10 +68,3 @@ Other alternatives for handling multiple dispatches for a single action are: red
 **References**
 * [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * [redux-thunk](https://github.com/reduxjs/redux-thunk)
-
-## Future References
-* Server render
-* CSS in JS
-* Async Rendering
-* GraphQL
-* Flow/TypeScript
