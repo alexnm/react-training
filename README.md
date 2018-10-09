@@ -1,6 +1,6 @@
 # React Training
 
-Reference materials for the introduction to React/Redux classroom training. Each chapter tries to cover a specific topic, sum up the key points and adding a bunch of references from different sources.
+Reference materials for the introduction to React/Redux classroom training. Each chapter tries to cover a specific topic, sum up the key points, while adding a bunch of references from different sources.
 
 **Chapters**
 * [The State of JavaScript in 2018](https://github.com/alexnm/react-training/blob/master/01-state-of-javascript-2018.md)
