@@ -8,7 +8,7 @@ Before we dive deep into a couple of ideas, let's try to separate state. A front
 
 Unfortunately it's almost impossible to draw an exact line and define a strict rule of what is app state and what is UI state. It will always be a thing of judgement and preference, of architecture and design. One good example is the form state, the object behind a form. You could argue that it is UI state, because it is mapped 1:1 to the inputs, but you could also argue that it represents a business object so it belongs in the app state.
 
-For the UI state, we've seen how React can handle the state at the component level. There's not ground rule on this, but in general, the UI state should be encapsulated in the components that you are building. Remember that components should work in any context, with as few external dependencies as possible.
+For the UI state, we've seen how React can handle the state at the component level. There's no ground rule on this, but in general, the UI state should be encapsulated in the components that you are building. Remember that components should work in any context, with as few external dependencies as possible.
 
 Application state can be regarded as easily accessible information (ex: objects, values) that is kept in memory and has it's own encapsulated management system (changes, transforms). Application state should not (if possible) leak as a global object. A very naïve approach is to consider the application state as the "immediate backend" for the frontend.
 
