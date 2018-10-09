@@ -13,6 +13,7 @@ Reference materials for the introduction to React/Redux classroom training. Each
 * [Redux](https://github.com/alexnm/react-training/blob/master/08-redux.md)
 * [React-Redux Integration](https://github.com/alexnm/react-training/blob/master/09-react-redux-integration.md)
 * [Backend Integration](https://github.com/alexnm/react-training/blob/master/10-backend-integration-in-react.md)
+* [Future References](https://github.com/alexnm/react-training/blob/master/11-future-references.md)
 
 **General References**
 * [React Docs](https://reactjs.org/docs/getting-started.html) - official documentation
