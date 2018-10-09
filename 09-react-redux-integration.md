@@ -7,7 +7,7 @@ The Provider is a top-level component that is added around your entire React app
 ```javascript
 const store = createStore(reducer, initialState);
 const app = (
-    <Provider store={ reduxStore }>
+    <Provider store={ store }>
         <Router>
             <App />
         </Router>
@@ -75,6 +75,9 @@ There are a bunch of patterns for mapDispatchToProps, trying to abstract and avo
 
 Each dispatch to Redux will trigger the reducers to calculate the new state of the application, so each new state means that the two functions are called, so new props *might* be passed to the components, triggering a re-render. To get more in depth into the re-render mechanisms, check the documentation and look at the *pure* configuration option.
 
+## Container vs Presentational Components
+A common pattern is to separate components which are connected to Redux as **container components**. These components have the connect around them, maybe have some state and do data processing / event handling if needed. But they don't render too much JSX, only child components at most. The child components then become what is known as **presentational components**, they are heavy on the JSX side, but are not directly connected to Redux and they get all their props from the parent components.
+
 ## Small Project
 With everything we learned so far, try implementing a shopping cart functionality on top of this [existing sandbox](https://codesandbox.io/s/n697w23oj). You can add the following:
 * A separate page for displaying an individual product (route, react component, link to page)
@@ -92,9 +95,6 @@ const mapStateToProps = (state) => ({
 ```
 
 The Redux ecosystem has libraries that abstract some of the things we discussed about and [reselect](https://github.com/reduxjs/reselect) is one of them, handling the Redux selectors.
-
-## Container vs Presentational Components
-A common pattern is to separate components which are connected to Redux as **container components**. These components have the connect around them, maybe have some state and do data processing / event handling if needed. But they don't render too much JSX, only child components at most. The child components then become what is known as **presentational components**, they are heavy on the JSX side, but are not directly connected to Redux and they get all their props from the parent components.
 
 ## Scaling Redux
 Scaling Redux and structuring a React/Redux app has been a hot topic for quite some time. It's an opinionated environment with a lot of pros and cons for various approaches.
