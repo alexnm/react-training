@@ -2,7 +2,7 @@
 Before we dive deep into the React ecosystem, let's take a closer look at the current state of web development.
 
 ## Breaking the monolith
-The traditional monoligh is being replaced with a more specialized architecture. There are multiple approaches here and it's not the aim of this training to cover them, but the frontend ecosystem is being heavily impacted by this architectural shift
+The traditional monolith is being replaced with a more specialized architecture. There are multiple approaches here and it's not the aim of this training to cover them, but the frontend ecosystem is being heavily impacted by this architectural shift
 * The frontend code is no longer embedded into the backend web application framework (ex: RubyOnRails, ASP.NET MVC, Django)
 * The backend has a clear interface through which it provides only data access (ex: REST API, GraphQL)
 * The frontend code is not just a collection of modules that provide interactivity, but now has complex responsibility like: routing, templating, data management, etc.
@@ -13,7 +13,7 @@ The traditional monoligh is being replaced with a more specialized architecture.
 * [Again, this is a great article!](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
 
 ## Component Based UI
-As a result of the FE ecosystem getting more and more complex, new ways of architecting the new idea of a "frontend application" had to be developed. While the initial push was towards the **MVC** approach ported on the FE as a **MVVM**-style architecture, later, framework developers realized that the UI interaction needs a different architecture. Slowly, each framework moved towards the component based architecture, where each each individual UI component works as a MVC system inside, but encapsulates all that behavior and UI into a reusable piece of code.
+As a result of the FE ecosystem getting more and more complex, new ways of architecting the new idea of a "frontend application" had to be developed. While the initial push was towards the **MVC** approach ported on the FE as a **MVVM**-style architecture, later, framework developers realized that the UI interaction needs a different architecture. Slowly, each framework moved towards the component based architecture, where each individual UI component works as an MVC system inside, but encapsulates all that behavior and UI into a reusable piece of code.
 
 ![Classic Frontend](https://reactjs.org/static/thinking-in-react-mock-1071fbcc9eed01fddc115b41e193ec11-4dd91.png "Classic Frontend")
 ![Component Split](https://reactjs.org/static/thinking-in-react-components-eb8bda25806a89ebdc838813bdfa3601-82965.png "Component Split")
@@ -25,7 +25,7 @@ Source: https://reactjs.org/docs/thinking-in-react.html
 * [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
 
 ## Declarative vs Imperative UI
-Together with these major shifts in web architecture, we have new ways of writing code. The jquery era favored the imperative approach of changing the DOM based on data flows and events. React and the new wave of frameworks favor a more declarative way of building UIs. We no longer have to deal with DOM selectors and direct DOM manipulation. This also bakes way for faster and more reliable libraries that are handling the direct DOM changes for us.
+Together with these major shifts in web architecture, we have new ways of writing code. The jquery era favored the imperative approach of changing the DOM based on data flows and events. React and the new wave of frameworks favor a more declarative way of building UIs. We no longer have to deal with DOM selectors and direct DOM manipulation. This also makes way for faster and more reliable libraries that are handling the direct DOM changes for us.
 
 Imperative DOM manipulation
 ```javascript
